@@ -1,6 +1,7 @@
 import 'package:clinic_app/calender_screen.dart';
 import 'package:clinic_app/find_doctor.dart';
 import 'package:clinic_app/schedule.dart';
+import 'package:clinic_app/start_page.dart';
 import 'package:clinic_app/subscription.dart';
 import 'package:clinic_app/user_info.dart';
 import 'package:clinic_app/user_info_2.dart';
@@ -24,7 +25,7 @@ class _myAppState extends State<myApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: user_info_2(),
+      home: start_page(),
       debugShowCheckedModeBanner: false,
 
     );
