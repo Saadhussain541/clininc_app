@@ -1,9 +1,14 @@
+import 'package:clinic_app/calender_screen.dart';
 import 'package:clinic_app/find_doctor.dart';
 import 'package:clinic_app/schedule.dart';
 import 'package:clinic_app/subscription.dart';
+import 'package:clinic_app/user_info.dart';
+import 'package:clinic_app/user_info_2.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'find_doctor1.dart';
 void main()
 {
   runApp(myApp());
@@ -19,7 +24,7 @@ class _myAppState extends State<myApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: find_doctor(),
+      home: user_info_2(),
       debugShowCheckedModeBanner: false,
 
     );

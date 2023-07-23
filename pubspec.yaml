@@ -39,6 +39,9 @@ dependencies:
   animated_bottom_navigation_bar: ^1.2.0
   google_fonts: ^4.0.0
   font_awesome_flutter: ^10.4.0
+  expansion_tile_card: ^2.0.0
+  table_calendar: ^3.0.9
+
 
 dev_dependencies:
   flutter_test:
