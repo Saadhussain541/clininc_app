@@ -1,6 +1,8 @@
+import 'package:clinic_app/find_doctor1.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 class find_doctor extends StatefulWidget {
   const find_doctor({Key? key}) : super(key: key);
 
@@ -42,7 +44,7 @@ class _find_doctor_bodyState extends State<find_doctor_body> {
                     height: 250,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Colors.blue,Colors.blue.shade200]
+                          colors: [Color(0xff1ed4be),Color(0xff00fff7)],
                         ),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(60),
@@ -166,6 +168,25 @@ class _find_doctor_bodyState extends State<find_doctor_body> {
                     SizedBox(
                       height: 20,
                     ),
+                    Container(
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all<Color>(Colors.pink),
+                        ),
+                        onPressed: ()
+                        {
+                          Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: find_doctor1()));
+
+                        },
+                        child: Text("More Doctor",style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 18
+                        ),),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    )
 
 
                   ],

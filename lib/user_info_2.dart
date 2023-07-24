@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+
+import 'user_info.dart';
 class user_info_2 extends StatefulWidget {
   const user_info_2({Key? key}) : super(key: key);
 
@@ -41,7 +44,7 @@ class _user_info_2_bodyState extends State<user_info_2_body> {
                     height: 250,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Colors.blue,Colors.blue.shade200]
+                          colors: [Color(0xff1ed4be),Color(0xff00fff7)],
                         ),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(60),
@@ -253,7 +256,23 @@ class _user_info_2_bodyState extends State<user_info_2_body> {
                             fontWeight: FontWeight.w700
                           ),),
                           SizedBox(height: 5,),
-                          Text(" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like",style: GoogleFonts.poppins(),)
+                          Text(" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like",style: GoogleFonts.poppins(
+                            fontSize: 16
+                          ),),
+                          SizedBox(height: 10,),
+                          Container(
+                            width: double.infinity,
+                            alignment: Alignment.center,
+                            child: ElevatedButton(
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all<Color>(Colors.pink)
+                              ),
+                              child: Text("More Info"),
+                              onPressed: (){
+                                Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: user_info()));
+                              },
+                            ),
+                          )
 
 
 

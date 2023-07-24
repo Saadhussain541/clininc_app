@@ -1,6 +1,9 @@
+import 'package:clinic_app/clinic_signup.dart';
+import 'package:clinic_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
 // import 'package:untitled3/schedule.dart';
 
 class start_page extends StatefulWidget {
@@ -48,7 +51,7 @@ class _myBodyState extends State<myBody> {
                   child: Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey.shade100,
+                      color: Colors.white30,
                     ),
                     width: 200,
                     height: 200,
@@ -61,7 +64,7 @@ class _myBodyState extends State<myBody> {
                   child: Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey.shade200,
+                      color: Colors.white38,
                     ),
                     width: 180,
                     height: 180,
@@ -76,7 +79,7 @@ class _myBodyState extends State<myBody> {
                   child: Container(
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.grey.shade300,
+                      color: Colors.white54,
                     ),
                     width: 150,
                     height: 150,
@@ -119,7 +122,9 @@ class _myBodyState extends State<myBody> {
                 Container(
                   width: 240,
                   height: 50,
-                  child: ElevatedButton(onPressed: (){},
+                  child: ElevatedButton(onPressed: (){
+                    Navigator.push(context, PageTransition(type: PageTransitionType.rightToLeft, child: myHome()));
+                  },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
                     ),
@@ -142,11 +147,17 @@ class _myBodyState extends State<myBody> {
                 SizedBox(
                   height: 15,
                 ),
-                Text("Sign in here",
-                  style: GoogleFonts.poppins(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 25
+                GestureDetector(
+                  onTap: ()
+                  {
+                    Navigator.push(context, PageTransition(type: PageTransitionType.rightToLeft, child: clinic_signup()));
+                  },
+                  child: Text("Sign in here",
+                    style: GoogleFonts.poppins(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 25
+                    ),
                   ),
                 )
 

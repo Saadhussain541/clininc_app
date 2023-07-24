@@ -51,7 +51,7 @@ class _calender_screen_bodyState extends State<calender_screen_body> {
                     height: 250,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                            colors: [Colors.blue,Colors.blue.shade200]
+                          colors: [Color(0xff1ed4be),Color(0xff00fff7)],
                         ),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(60),
